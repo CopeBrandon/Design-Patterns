@@ -25,6 +25,7 @@ abstract class GameObject{
 
 abstract class Item extends GameObject{
     subjectType: TargetType;
+    targettingType: String;
     abstract effect(target: GameObject): GameEvent;
 
     use(user: GameObject): GameEvent{

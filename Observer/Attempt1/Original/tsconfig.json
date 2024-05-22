@@ -1,0 +1,7 @@
+{
+    "files": ["Observer.ts"],
+    "compilerOptions": { 
+        "lib": ["ES6", "dom", "es2016"],
+    },
+    
+}
