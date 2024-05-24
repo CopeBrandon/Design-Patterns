@@ -1,0 +1,14 @@
+[
+  ConcreteSubject {
+    observers: [],
+    state: ConcreteState { content: [Array] }
+  },
+  ConcreteSubject {
+    observers: [],
+    state: ConcreteState { content: [Array] }
+  },
+  ConcreteSubject {
+    observers: [ [ConcreteObserver] ],
+    state: ConcreteState { content: [Array] }
+  }
+]
