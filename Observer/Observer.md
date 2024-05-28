@@ -24,3 +24,6 @@ Whenever an object relies on another, the dependee may change. This could cause 
 
 ## After Testing
 I want to do the example where you specify an aspect of interest for the Observer as it's being attached.
+
+One of the annoying aspects of the Observer, is how do you handle the references to each other?
+In TypeScript, interfaces can not have static variables, so you pretty much need to use abstract classes to do it. Which is a bit of a shame,  I would've liked to use interfaces for that... I suppose the best way to utilize this pattern with this limitation is creating an abstract class that implements the interface and build the class out of it. One of the value adds of this design pattern is that you can apply the interface to any class to allow it to watch a concrete subject class. At the end of the day, it's not terribly awful that the static variables aren't allowed in the interface, as the getters and setters are publicly accessible and thus can exist in the interface.

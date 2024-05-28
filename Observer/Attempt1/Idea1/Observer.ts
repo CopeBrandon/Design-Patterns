@@ -104,10 +104,6 @@ for(let i=0; i<100; i++){
     subjects.push(subject);
 }
 
-// for(let subject of subjects){
-    // console.log(`Subject: ${subject.getState().get()}`)
-    // console.log(subject);
-// }
 console.log(subjects[subjects.length-1].observers.length);
 let i=0; let j=0;
 
