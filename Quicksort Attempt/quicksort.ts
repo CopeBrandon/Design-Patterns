@@ -35,11 +35,10 @@ function generateRandomArray(size: number){
     return a;
 }
 
-const size = 10000000;
+const size = 1000000;
 const arr = generateRandomArray(size);
 const time = Date.now();
 console.log(arr);
 const a2 = quickSort(arr);
 console.log(a2);
-console.log(`Quicksorting ${size} values took ${Date.now() - time}ms`)
-
+console.log(`Quicksorting ${size} values took ${Date.now() - time}ms`);
