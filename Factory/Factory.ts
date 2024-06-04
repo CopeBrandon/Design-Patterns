@@ -35,7 +35,7 @@ abstract class App{
                     // couldn't we open and push to docs in that method? I guess this reduces wetness...
         const doc = this.createDocument();
         doc.open();
-        this.docs.push(doc);
+        this.docs.push(doc); 
     }
 }
 
