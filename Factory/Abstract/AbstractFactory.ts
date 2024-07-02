@@ -88,4 +88,5 @@ console.log(v);
 v = VectorBuilder.build(VectorBuilder.VectorTypes.CARTESIAN, { x0: 0, y0: 0, a: 1, s: 1});
 console.log(v);
 
-//TODO: figure out how to handle errors on the output side.
+//TODO: figure out how to handle errors on the output side. Errors get passed up to the top over time using TS it seems, 
+//unless you catch and return default behavior which can cause things to not happen as expected. Maybe you should just explode sometimes idk.

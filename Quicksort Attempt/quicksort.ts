@@ -1,13 +1,14 @@
-import util from 'node:util';
 
+//TODO: There is a problem where the duration expands twice as fast as expected, 10x the value = 20x the duration. Not sure why, im sure its a logic error somewhere.
 function quickSort(a: Array<number>): Array<number>{
     if(a.length <= 1){
-        // console.log("ended recursion, returning" + util.inspect(a));
         return a;
     }
+
     let piv = 0;
     let left: number[] = [];
     const right: number[] = [];
+
     for(let i=1; i<a.length; i++){
         if(a[i] < a[piv]){
             left.push(a[i]);
@@ -15,8 +16,7 @@ function quickSort(a: Array<number>): Array<number>{
             right.push(a[i]);
         }
     }
-    // console.log(`left: ${util.inspect(left)}`);
-    // console.log(`right: ${util.inspect(right)}`);
+
     left = quickSort(left);
     left.push(a[0]);
     return left.concat(quickSort(right));
@@ -37,8 +37,9 @@ function generateRandomArray(size: number){
 
 const size = 1000000;
 const arr = generateRandomArray(size);
-const time = Date.now();
 console.log(arr);
+const time = Date.now();
 const a2 = quickSort(arr);
+const after = Date.now();
 console.log(a2);
-console.log(`Quicksorting ${size} values took ${Date.now() - time}ms`);
+console.log(`Quicksorting ${size} values took ${after - time}ms`);
