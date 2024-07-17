@@ -10,3 +10,7 @@ This design pattern is quite simple, realistically. You have some object, the "s
 ## Experimentation
 I think I'll try creating a google map example which has a subset of image information. I'll simplify the concept by using substrings of content as the details that are distributed by the proxy. This allows for a reasonable test-case.
 ## Post Experimentation
+Seems like this design pattern is pretty simple to implement. 
+I don't know if I can even think of any downsides to this pattern in essence. Realistically, it's just creating a segmented version of another class. If you didn't do that, you'd have to access the whole object in whatever that means in that moment. More memory usage, more access than required, etc. I guess it's a computation tax to some extent, as you have to build up the proxy. Thats only really a concern when you're going to end up lazy loading the rest of the subject class.
+
+One of the uses for this I could definitely see is when you're generating data for use in your API. You might want to send a truncated or specific sections of the class. 

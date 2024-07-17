@@ -25,9 +25,6 @@ class MapImageSection extends AbstractMapImage{
         this.subject = subject;
         this.coordinate = [start, end];
     }
-    read(): void{
-        console.log(this.contents);
-    }
 }
 
 class MapImageProxy extends AbstractMapImage{
@@ -46,4 +43,8 @@ class MapViewer {
         map.read();
     }
 }
-
+let mapViewer: MapViewer = new MapViewer();
+const map = new MapImage("full image contents".split(""));
+const mapSection = new MapImageSection(map, 5, map.getContents().length);
+mapViewer.read(map);
+mapViewer.read(mapSection);

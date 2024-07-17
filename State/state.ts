@@ -49,10 +49,11 @@ stateUser.state.statefulMethod();
 console.log('stateUser.state.value: ' + stateUser.state.value)
 stateUser.state = new StateB();
 stateUser.state.statefulMethod();
-console.log('stateUser.state.value: ' + stateUser.state.value)
+console.log('stateUser.state.value: ' + stateUser.state.value);
 stateUser.state = new StateB();
 stateUser.state.statefulMethod();
-console.log('stateUser.state.value: ' + stateUser.state.value)
+console.log('stateUser.state.value: ' + stateUser.state.value);
 stateUser.state = new StateA();
 stateUser.state.statefulMethod();
-console.log('stateUser.state.value: ' + stateUser.state.value)
+console.log('stateUser.state.value: ' + stateUser.state.value);
+
